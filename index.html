@@ -12,26 +12,12 @@
             });
         })
     </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KVXVBSV');
-    </script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deployment with Azure</title>
 </head>
 <body>
-    
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVXVBSV"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+   
     <style>
         body{
     background-color: lightskyblue;
@@ -42,10 +28,6 @@
     color: rgb(45, 45, 226);
     }
     </style>
-    <div id="ccf-lcwidget-chat" class="d365-mkt-config" style="display:none" data-website-id="89JF2Fa-exV-5ixaiTVui1y_gqYcnxAVAB0ZZvIj8rs" 
-            data-hostname="ca264331a46e4359af48029ef070df94.svc.dynamics.com" data-app-id="24d50ba7-292e-432a-a2dc-5301efa26059" data-org-id="ae29c25f-ef18-4541-9c21-4ce5c6c1c633" 
-            data-org-url="https://orga370c35a-crm.omnichannelengagementhub.com">
-    </div>
     <h1 class="head">Deployment with Azure in 4.5 minutes</h1>
     <h3>
         <div>Hello, I can haz your ip?</div>
@@ -53,52 +35,6 @@
         <div><strong>Public:  </strong><span class="public-ip"></span></div>
         <div><strong>HostName:  </strong><span class="host"></span></div>
     </h3>
-    <button onclick="showAlert()">Show health bot</button>
-    <button onclick="toggleAzureBot()">Show/hide azure bot</button>
-    <iframe class="azure-bot" style="display:block; visibility:hidden" src='https://webchat.botframework.com/embed/scus-botservice-wa?s=Ha6rAb7Zxfg.LnEWUQof-0jWUcGCfsG1asq5GFLiYeQqUTEtBSn4dCk'  style='min-width: 400px; width: 100%; min-height: 500px; height: 500px;'></iframe>
-
-    <script type="text/javascript" id="">
-        var dataSource=document.querySelector(".d365-mkt-config");
-        var OmnichannelDataAppId=dataSource.dataset.appId;
-        var OmnichannelDataOrgId=dataSource.dataset.orgId;
-        var OmnichannelScriptDataOrgUrl=dataSource.dataset.orgUrl;
-        var script=document.createElement("script");
-        script.id="Microsoft_Omnichannel_LCWidget";
-        script.src="https://oc-cdn-ocprod.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js";
-        script.dataset.appId=OmnichannelDataAppId;
-        script.dataset.lcwVersion="prod";
-        script.dataset.orgId=OmnichannelDataOrgId;
-        script.dataset.orgUrl=OmnichannelScriptDataOrgUrl;
-        script.dataset.colorOverride="#0078BF";
-        script.dataset.fontFamilyOverride="Arial";
-        script.dataset.hideChatButton="true";
-        var scriptId=document.querySelector("#ccf-lcwidget-chat");
-        scriptId.parentElement.append(script);
-    </script>
-
-    <script>
-        function contextProvider(){
-            return {
-                'va_PageUrl': {'value': "Enterprise", 'isDisplayable': true},
-                'SelfService': {'value': sessionStorage.getItem("SelfService")}
-            };
-        }
-
-        function showAlert() {
-            Microsoft.Omnichannel.LiveChatWidget.SDK.setContextProvider(contextProvider);
-            Microsoft.Omnichannel.LiveChatWidget.SDK.startChat();
-        }
-
-        function toggleAzureBot() {
-            var st = document.querySelector(".azure-bot").style;
-            if (st.visibility === "hidden"){
-                st.visibility = "visible"
-            } else {
-                st.visibility = "hidden"
-            }
-        }
-    </script>
-
 
 </body>
 </html>
