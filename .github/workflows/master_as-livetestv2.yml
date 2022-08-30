@@ -2,11 +2,6 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy Node.js app to Azure Web App - as-livetestv2
-
-uses: azure/webapps-deploy@v2
-  with:
-    publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-    
 on:
   push:
     branches:
@@ -56,5 +51,5 @@ jobs:
         with:
           app-name: 'as-livetestv2'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CDAC0DD80AD148928C2001920D1FFE29 }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
